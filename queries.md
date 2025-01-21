@@ -37,7 +37,7 @@ GROUP by p.brand
 order by sum(t.sale) DESC
 LIMIT 5
 ```
-![alt text](image-5.png)
+![alt text](query_2.png)
 
 # Open-ended questions:
 ## 1. Which is the leading brand in the Dips & Salsa category?
@@ -54,4 +54,4 @@ GROUP by p.brand
 order by sum(t.sale) DESC
 limit 1
 ```
-![alt text](image-6.png)
+![alt text](query_3.png)
