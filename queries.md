@@ -17,7 +17,7 @@ GROUP by p.brand
 order by count(distinct(receipt_id)) DESC
 LIMIT 5
 ```
-![alt text](image-4.png)
+![alt text](query_1.png)
 
 ## 2. What are the top 5 brands by sales among users that have had their account for at least six months?
 Assumption/Data cleaning - Not considering rows from products where barcode is missing
