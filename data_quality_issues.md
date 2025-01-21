@@ -10,6 +10,8 @@
 |language|30508|
 |gender|5892|
 
+![alt text](images/usermissing.png)
+
 
 
 ## 2. Products
@@ -34,6 +36,8 @@ Health & Wellness,Hair Care,Hair Color,HENKEL,GÖT2B,017000329260
 |Manufacturer|226474|
 |Brand|226472|
 
+![alt text](images/productsmissing.png)
+
 >4. Barcode is Integer type in ER diagram but some db might fail to parse it as Integer as it's value exceeds Integer capacity, so it should be BigInt
 
 
@@ -42,6 +46,8 @@ Health & Wellness,Hair Care,Hair Color,HENKEL,GÖT2B,017000329260
 ```
 SELECT count(*) from transactions where barcode=''
 ```
+![alt text](images/transactionsmissing.png)
+
 >2. There seems to be only `262` transactions for which user info is available in ***users*** table. This means there is lot of user info missing.
 ```
 select count(*) from transactions where user_id in (select DISTINCT(id) from users)

@@ -17,7 +17,7 @@ GROUP by p.brand
 order by count(distinct(receipt_id)) DESC
 LIMIT 5
 ```
-![alt text](query_1.png)
+![alt text](images/query_1.png)
 
 ## 2. What are the top 5 brands by sales among users that have had their account for at least six months?
 Assumption/Data cleaning - Not considering rows from products where barcode is missing
@@ -37,11 +37,11 @@ GROUP by p.brand
 order by sum(t.sale) DESC
 LIMIT 5
 ```
-![alt text](query_2.png)
+![alt text](images/query_2.png)
 
 # Open-ended questions:
 ## 1. Which is the leading brand in the Dips & Salsa category?
-Assumption/Data cleaning - Transaction table has multiple entries ffor same `receipt_id`, `barcode` with different `sale` and `quantity` values. As part of cleaning, I'm merging all rows considering avergae  `sale` and `quantity` values
+Assumption/Data cleaning - Transaction table has multiple entries for same `receipt_id`, `barcode` with different `sale` and `quantity` values. As part of cleaning, I'm merging all rows considering max of `sale` and `quantity` values
 ```
 SELECT p.brand, sum(t.sale) as count
 FROM
@@ -54,4 +54,4 @@ GROUP by p.brand
 order by sum(t.sale) DESC
 limit 1
 ```
-![alt text](query_3.png)
+![alt text](images/query_3.png)
