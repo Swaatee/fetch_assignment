@@ -3,7 +3,7 @@ Hi,
 Hope you're all doing well. I have been working with Fetch datasets of users, transactions and products and have few interesting finds that I'd like to share. I have found some major data quality issues that should be addressed along with some interesting trends that may help making data driven decisions.
 
 Data quality issues: 
-1. DB tables users,transactions and products have lot of missing values.
+1. Database tables users,transactions and products have lot of missing values.
 2. Out of all transactions we only have user info for ~260 transactions. This data is important to associate user trends for purchases.
 3. Similarly, products table have only 60% information of all products sold in transactions. This is another gap to associate products sale trends/
 4. Transactions and products table have a ton of duplicated entries, which indicate issue in the system adding entries to the database. We should look into how many places is the data being added from which ideally should be only one system.
